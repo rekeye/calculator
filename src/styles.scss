@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&display=swap');
+
+$background: #252525;
+
+$main: #e2e2e2;
+$font: #141414;
+$red: rgb(179, 30, 0);
+$blue: rgb(23, 23, 182);
+$green: rgb(0, 131, 0);
+
+
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Stint Ultra Expanded', cursive;
+  background: $background;
+  color: $font;
+  button {
+    font-family: 'Stint Ultra Expanded', cursive;
+    font-size: 1.2em;
+  }
+}
+
+.display {
+  height: 3em;
+  padding: 0.5em;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background: $main;
+}
+.calc {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 4em 4em 4em 4em;
+  grid-template-rows: 3em 3em 3em 3em 3em;
+  &__button {
+    border: 0;
+  }
+  &__clear {
+    background: $red;
+    grid-column: 1/span 2;
+  }
+  &__operator {
+    background: $blue;
+  }
+  &__num {
+    background: $main;
+    &--zero {
+      grid-column: 1/span 2;
+    }
+  }
+  &__equals {
+    background: $green;
+    grid-column: 4;
+    grid-row: 4/span 2;
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  color:  $red;
+}
+.white {
+  color: rgb(177, 177, 177);
+}
